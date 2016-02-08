@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>jp_pEng - Newsfeed</title>
+		<link rel="stylesheet" type="text/css" href="../data/css/newsfeed.css">
+		<link rel="stylesheet" type="text/css" href="../data/css/scrollbar.css">
+	</head>
+	
+	<!-- Include libraries -->
+	<script src = "../data/common.js" type = "text/javascript"></script>
+
+	<script type="text/javascript" src="http://jppeng.tumblr.com/api/read/json"></script>
+	<center>
+		<table width = "90%" border="0" style = "border: 0; background: transparent; box-shadow: 0 0 0 transparent; min-width: 540px;">
+			<tr>
+				<td valign="top">
+					<br/>
+					<br/>
+					<script language="JavaScript">
+					function get_text_param(str) {
+						return str.substring(str.lastIndexOf("[")+1,str.lastIndexOf("]"));
+					}
+					
+					var id = getUrlVars()["id"];
+					if (id > 0)
+					{
+						var scan = parseInt(tumblr_api_read['posts-total']) - id;
+						
+						document.write("<div id = \"div_post\"><div id = \"topadd_container\"><font size = 2px>");
+						str = get_text_param(tumblr_api_read['posts'][scan]['regular-title']);
+						if (str == "")
+							document.write("Blog Post");
+						else
+							document.write(str);
+						document.write("</font></div><div id = \"post_container\">");
+						document.write("<font size = 6px style = \"line-height: 44px;\">");
+						//str = tumblr_api_read['posts'][scan]['regular-title'].replace("[" + get_text_param(tumblr_api_read['posts'][scan]['regular-title']) + "] ","");
+						if (get_text_param(tumblr_api_read['posts'][scan]['regular-title']) != "")
+							str = tumblr_api_read['posts'][scan]['regular-title'].substr(get_text_param(tumblr_api_read['posts'][scan]['regular-title']).length + 3);
+						else
+							str = tumblr_api_read['posts'][scan]['regular-title'];
+						document.title = str + " - jp_pEng";
+						document.write(str);
+						document.write("</font>");
+						document.write(tumblr_api_read['posts'][scan]['regular-body']);
+						document.write("<small><div style=\"text-align:right;\">Posted on: " + tumblr_api_read['posts'][scan]['date-gmt'] + "</div></small>");
+						document.write("</div></div></br>");
+					}
+					else
+					{
+						for (var i = parseInt(tumblr_api_read['posts-start']); i < parseInt(tumblr_api_read['posts-total']); i += 1)
+						{
+							document.write("<div id = \"div_post\"><div id = \"topadd_container\"><font size = 2px>");
+							str = get_text_param(tumblr_api_read['posts'][i]['regular-title']);
+                            if (str == "")
+								document.write("Blog Post");
+                            else
+								document.write(str);
+							document.write("</font></div><div id = \"post_container\">");
+							document.write("<font size = 6px style = \"line-height: 44px;\">");
+                            //str = tumblr_api_read['posts'][i]['regular-title'].replace("[" + get_text_param(tumblr_api_read['posts'][i]['regular-title']) + "] ","");
+							if (get_text_param(tumblr_api_read['posts'][i]['regular-title']) != "")
+								str = tumblr_api_read['posts'][i]['regular-title'].substr(get_text_param(tumblr_api_read['posts'][i]['regular-title']).length + 3);
+							else
+								str = tumblr_api_read['posts'][i]['regular-title'];
+                            document.write(str);
+                            document.write("</font>");
+							document.write(tumblr_api_read['posts'][i]['regular-body']);
+							document.write("<small><div style=\"text-align:right;\">[<a href = \"?id=" + (parseInt(tumblr_api_read['posts-total']) - i) + " target = \"_top\"\">Permalink</a>] - Posted on: " + tumblr_api_read['posts'][i]['date-gmt'] + "</div></small>");
+                            document.write("</div></div></br>");
+						}
+					
+						//alert(parseInt(tumblr_api_read['posts-total']));
+						/*for (var i = parseInt(tumblr_api_read['posts-start']); i < parseInt(tumblr_api_read['posts-total']); i += 1)
+						{
+							document.write("<h id = 'exo'><font size = 6px>" + tumblr_api_read['posts'][i]['regular-title'] + "</font></h>");
+							document.write("<h id = 'exo'>" + tumblr_api_read['posts'][i]['regular-body'] + "</h><br/>");
+							document.write("<h id = 'exo'><p align='right'>Posted by iDesty: " + tumblr_api_read['posts'][i]['date-gmt'] + "</p></h><img src = 'http://derpg.net/images/vx_slicediv2.png'><br/>");
+						}*/
+					}
+					</script>
+				</td>
+			</tr>
+		</table>
+	</center>
+</html>

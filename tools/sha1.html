@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>MD5 Hash Generator</title>
+		<link rel="stylesheet" type="text/css" href="../data/css/iframe_main.css">
+		<script src="js/sha1.js" type="text/javascript"></script>
+	</head>
+	
+	<style type = "text/css">
+		table {
+			width: 100%;
+		}
+		.text_field {
+			width: 100%;
+		}
+	</style>
+	
+	<script type = "text/javascript">
+		function generate() {
+			//One function to do it all.
+			var str = document.getElementById('input_tb').value;
+			document.getElementById('hash_tb').value = hex_sha1(str);
+		}
+	</script>
+	
+	<body>
+		<!-- Appearance -->
+		<table width = "100%">
+			<tr>
+				<td width = "80px">String:</td>
+				<td><input type = "text" class = "text_field" id = "input_tb" onkeyup = "generate();" onkeydown = "generate();"/></td>
+			</tr>
+			<tr>
+				<td width = "80px">SHA1 Hash:</td>
+				<td><input type = "text" class = "text_field" id = "hash_tb"/></td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,287 @@
+﻿<html>
+	<head>
+		<title>jp_pEng (BETA) - Welcome!</title>
+		<link rel="stylesheet" type="text/css" href="data/css/msg_box.css">
+	</head>
+	
+	<style type = "text/css">
+		html {
+			background: #000000 url(images/back_blurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			color: #FFFFFF;
+			
+			font-family: titillium, koz-kana, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+			
+			text-shadow: 0 0 1px black;
+		}
+		
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		@font-face {
+			font-family: titillium;
+			font-style: normal;
+			font-weight: 300;
+			src: url('data/fonts/Titillium-Thin.otf');
+		}
+		
+		@font-face {
+			font-family: exo;
+			src: url('data/fonts/EXO-REGULAR.OTF');
+		}
+		
+		@font-face {
+			font-family: koz-kana;
+			src: url('data/fonts/KozGoPro-Light.otf');
+		}
+		
+		iframe {
+			border: 0px solid transparent;
+			border: 1px solid black;
+			margin: 0;
+			padding: 0;
+			background: rgba(0,0,0,0.5);
+		}
+		
+		div.window {
+			position: fixed;
+			border: 2px solid black;
+			box-shadow: 0 0 25px black;
+			background: white;
+			margin: 0 0 0 0;
+			padding: 0px 0px 0px 0px;
+			
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			-ms-user-select: none;
+			-khtml-user-select: none;     
+			user-select: none;
+			
+			background: #000000 url(images/back_superblurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			color: #FFFFFF;
+		}
+		
+		div.window_fs {
+			position: fixed;
+			border-left: 1px solid #666666;
+			background: white;
+			margin: 0 0 0 0;
+			padding: 0px 0px 0px 0px;
+			
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			-ms-user-select: none;
+			-khtml-user-select: none;     
+			user-select: none;
+			
+			left: 320px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			
+			background: #000000 url(images/back_blurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			color: #FFFFFF;
+		}
+		
+		div.win_bk {
+			//background: transparent url(images/topleft_shade.png) top left no-repeat;
+			background-size: 100% auto;
+			background-opacity: 50%;
+			padding: 4px 4px 4px 4px;
+			margin: 0 0 0 0;
+		}
+		
+		div.titlebar {
+			height: 26px;
+		}
+		
+		div.option_select {
+			background: #000000 url(images/back_blurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			
+			width: 100%;
+			height: 100%;
+			
+			border-right: 1px solid #666666;
+			
+			box-shadow: 0px 0px 15px black;
+		}
+		
+		div.sidebar_header, div.sidebar_header_o {
+			padding: 2px;
+			padding-left: 24px;
+			padding-top: 16px;
+			background: rgba(0, 0, 0, 0);
+			border-bottom: 2px solid #A0A0A0;
+			box-shadow: -3px 1px 10px black;
+			color: white;
+		}
+		
+		div.sidebar_footer {
+			background: rgba(0, 0, 0, 0);
+			border-top: 2px solid #A0A0A0;
+			box-shadow: -3px -1px 10px black;
+			color: white;
+		}
+		
+		div.sidebar_click {
+			padding: 8px;
+			width: 304px;
+			height: 66px;
+			background: rgba(0, 0, 0, 0.45);
+			border-bottom: 1px solid #A0A0A0;
+		}
+		
+		div.sidebar_click:hover {
+			background: rgba(255, 255, 255, 0.25);
+			cursor: pointer; cursor: hand;
+			color: black;
+		}
+		
+		div.option_bg {
+			background-color: rgba(0, 0, 0, 0.25);
+			width: 100%;
+			height: 100%;
+			color: #FFFFFF;
+		}
+		
+		p.title {
+			font-size: 16px;
+			font-family: exo;
+			margin-top: 5px;
+			margin-bottom: -5px;
+			padding: 0;
+			text-shadow: 0px 0px 1px black, 0px 0px 5px black, 0px 0px 15px black;
+			position: relative;
+			top: -3px;
+		}
+		
+		#BLURRED_BAK_DIV {
+			height: 40%;
+			position: relative;
+			background: #000000 url(images/back_superblurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			box-shadow: 0px 0px 25px black;
+		}
+		
+		#BLURRED_BAK_LANGUAGE_TITLE {
+			width: 100%;
+			height: 52px;
+			display: table;
+			vertical-align: middle;
+			overflow: hidden;
+			
+			background: #000000 url(images/back_superblurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			box-shadow: 0px 0px 25px black;
+		}
+		
+		#DIV_FLAGS img {
+			background: #000000 url(images/back_superblurred.jpg) repeat scroll top left;
+			background-position: center center;
+			background-attachment: fixed;
+			box-shadow: 0 0 25px black;
+		}
+		
+		#DIV_FLAGS img:hover {
+			box-shadow: 0 0 25px white;
+		}
+		
+		.DIV_border_top_bottom {
+			border-top: 2px solid #888;
+			border-bottom: 2px solid #888;
+		}
+	</style>
+	
+	<script src = "data/lang_data.js" type = "text/Javascript"></script>
+	
+	<body>
+		<!--<table id = "main" width = "100%" height = "100%" cellspacing = "0" cellpadding="0" border = "0">
+			<tr>
+				<td width = "320px" valign = "top">
+					<div class = "option_select">
+						<div class = "option_bg" id = "module_pool">
+						</div>
+					</div>
+				</td>
+				<td>
+					<div id = "workbase">
+					</div>
+				</td>
+			</tr>
+		</table>-->
+		<div style = "height: 10%;"></div>
+		<div id = "BLURRED_BAK_DIV" class = "DIV_border_top_bottom">
+			<div style = "width: 100%; position:absolute; top:50%; margin-top:-134px;">
+				<center>
+					<img src = "images/logo.png"/>
+				</center>
+			</div>
+		</div>
+		
+		<!--Language Selection Caption-->
+		<div style="height: 8%; position:relative; border: 1px solid transparent;">
+			<div style = "width: 100%; position:absolute; top:50%; margin-top:-1%;">
+				<center>
+					<font size = "5">
+						<script type = "text/javascript">document.write(text_data["en"]["platform_choose"]);</script>
+					</font>
+				</center>
+			</div>
+		</div>
+		
+		<!--To start off with the flags... We will execute some Javascript to generate the Flag Entities.-->
+		<script type="text/javascript" src="data/platform_data.js"></script>
+		<script type="text/javascript" src="data/msg_box.js"></script>
+		<!--Flags-->
+		<div style="height: 25%; position:relative; border: 1px solid transparent;">
+			<div id="DIV_FLAGS" style = "width: 100%; position:absolute; top:50%; margin-top:-95px;">
+				<center>
+					<script type = "text/javascript">
+						for (var i = 0; i < plat_count; i++)
+							if (flag_plat_avai[i] == true) {
+								document.write("<a href = \"" + flag_plat_code[i] + "/index.php\"><img src = \"" + flag_plat_imag[i] + "\" hspace=\"20\" vspace=\"20\" onClick=\"document.cookie='DERPG_LANG=" + flag_plat_code[i] + "';\" onMouseOver=\"document.getElementById('LANG_TEXT_CONTAINER').innerHTML = '" + flag_plat_name[i] + "';\" onMouseOut=\"document.getElementById('LANG_TEXT_CONTAINER').innerHTML = '';\"/></a>");
+							} else {
+								document.write("<a onclick = \"showMsgBox_PlatformUnavailable('" + flag_plat_name[i] + "')\"><img src = \"" + flag_plat_imag[i] + "\" hspace=\"20\" vspace=\"20\" onClick=\"document.cookie='DERPG_LANG=" + flag_plat_code[i] + "';\" onMouseOver=\"document.getElementById('LANG_TEXT_CONTAINER').innerHTML = '" + flag_plat_name[i] + "';\" onMouseOut=\"document.getElementById('LANG_TEXT_CONTAINER').innerHTML = '';\"/></a>");
+							}
+					</script>
+				</center>
+			</div>
+		</div>
+
+		<!-- Language Title-->
+		<div id = "BLURRED_BAK_LANGUAGE_TITLE" class = "DIV_border_top_bottom">
+			<center>
+				<div style="display: table; height: 48px; #position: relative; overflow: hidden;">
+					<div style=" #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+						<div style=" #position: relative; #top: -50%">
+							<font size = "5">
+								<div id = "LANG_TEXT_CONTAINER" style = "width: 100%; overflow: hidden; text-shadow: 0 0 5px black, 0 0 10px black; color: white;">
+									<!--Content-->
+								</div>
+							</font>
+						</div>
+					</div>
+				</div>
+			</center>
+		</div>
+		<center>
+			<p>
+				<script type="text/javascript">document.write(text_data["en"]['copyright'])</script>
+			</p>
+		</center>
+
+	</body>
+</html>

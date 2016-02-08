@@ -1,0 +1,50 @@
+.tango_box {
+	padding: 20px 16px 20px 16px;
+	width: auto;
+}
+
+.tango_box h2 {
+	margin-bottom: 20px;
+}
+
+.tango_eigo {
+	padding-left: 20px;
+}
+
+.suggested_words {
+	width: calc(100% + 32px);
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 24px;
+	margin-top: 24px;
+	position: relative;
+	left: -16px;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+}
+
+.suggested_left {
+	float: left;
+	margin-left: 4px;
+}
+
+.suggested_right {
+	float: right;
+	margin-right: 4px;
+}
+
+table.glass {
+	border: solid #777 1px;
+	box-shadow: 0px 0px 5px black;
+	background-color: rgba(20, 20, 20, 0.5);
+	background-position: top center;
+	background-attachment: fixed;
+	color: #FFFFFF;
+	line-height: 22px;
+	width: calc(100% - 40px);
+	margin: 0px 20px;
+}
+
+a:link {color:#C0C0C0;}      /* unvisited link */
+a:visited {color:#A0A0A0;}  /* visited link */
+a:hover {text-shadow: 0 0 5px white; color:white;}  /* mouse over link */
+a:active {color:#A0A0A0;}  /* selected link */

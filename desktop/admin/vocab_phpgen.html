@@ -1,0 +1,18 @@
+﻿<html>
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src = "../../data/vocab.js" type = "text/javascript"></script>
+	<script type = "text/javascript">
+		data = JSON.stringify(vocabulary);
+		$.ajax(
+			{
+				type: "POST",
+				url : "vocab_phpgen.php",
+				data: { vocab_array : data },
+				timeout: 12000 /*,
+				success: function(data) {
+					alert(data);
+				}*/
+			}
+		);
+	</script>
+</html>

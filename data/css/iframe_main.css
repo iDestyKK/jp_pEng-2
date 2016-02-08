@@ -1,0 +1,33 @@
+@font-face {
+	font-family: Myname;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/Titillium-Thin.otf');
+}
+
+@font-face {
+	font-family: exo;
+	src: url('../fonts/EXO-REGULAR.OTF');
+}
+
+@font-face {
+	font-family: koz-kana;
+	src: url('../fonts/KozGoPro-Light.otf');
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+.text_field {
+	background: transparent;
+	border: 1px solid #999999;
+	color: white;
+	font-family: Myname, koz-kana, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+
+html {
+	color: #ffffff;
+	font-family: Myname, koz-kana, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+}
