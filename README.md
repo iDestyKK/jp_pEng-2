@@ -3,6 +3,8 @@
 
 Hello! This is a rewrite of my Japanese Vocabulary Quizzing Engine known as "jp_pEng". It can be accessed on http://jppeng.derpg.xyz/beta/desktop/index.php.
 
+<p align="center"><a href = "http://i.imgur.com/Y3aKLK5.png" target = "_blank"><img src = "http://i.imgur.com/Y3aKLK5.png" width = "500px"/></a></br><i>Click to see full res (1920x1080)</i></p>
+
 <h3>What is the goal?</h3>
 The goal of the project is to offer online access to people who work with the books "げんき１" and "げんき２" by The Japan Times. The site takes the vocabulary and kanji from the book and offers quizzes to the users. Users can generate worksheets to print off or work digitally and get graded instantly. There is a chart for ひらがな and カタカナ if needed for beginners. And if you are a developer who feels like command line is the way to go, it even has that (barely)!
 
