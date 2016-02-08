@@ -1,4 +1,6 @@
 # jp_pEng 2
+<b>Current Version</b>: 0.0.2 (2016年02月07日)
+
 Hello! This is a rewrite of my Japanese Vocabulary Quizzing Engine known as "jp_pEng". It can be accessed on http://jppeng.derpg.xyz/beta/desktop/index.php.
 
 <h3>What is the goal?</h3>
